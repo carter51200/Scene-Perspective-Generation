@@ -1,0 +1,5 @@
+{
+  "name": "Forensic Spatial Analyzer",
+  "description": "Upload an image of a space and the AI will generate 5 consistent master plates with different camera perspectives for forensic visualization, maintaining visual consistency with the original image.",
+  "requestFramePermissions": []
+}
