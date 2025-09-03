@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import type { GeneratedImage } from '../types';
 import { CloseIcon } from './IconComponents';
@@ -50,19 +49,19 @@ export const ImageModal: React.FC<ImageModalProps> = ({ shot, onClose }) => {
     >
       <style>{animationStyles}</style>
       <div 
-        className="bg-gray-900 border border-gray-700 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-slideUp"
+        className="bg-slate-900 border border-slate-700 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] flex flex-col overflow-hidden animate-slideUp"
         onClick={(e) => e.stopPropagation()} // Prevent clicks inside modal from closing it
       >
-        <header className="p-4 flex justify-between items-center border-b border-gray-700 flex-shrink-0">
+        <header className="p-4 flex justify-between items-center border-b border-slate-700 flex-shrink-0">
             <div>
-                <span className="inline-block bg-cyan-900/50 text-cyan-300 text-xs font-semibold px-2 py-1 rounded-full mb-1">
+                <span className="inline-block bg-indigo-900/50 text-indigo-300 text-xs font-semibold px-2 py-1 rounded-full mb-1">
                     {shot.lens}
                 </span>
                 <h2 id="image-modal-title" className="text-xl font-bold text-white">{shot.name}</h2>
             </div>
             <button 
                 onClick={onClose} 
-                className="p-2 rounded-full text-gray-400 hover:bg-gray-700 hover:text-white transition-colors"
+                className="p-2 rounded-full text-slate-400 hover:bg-slate-700 hover:text-white transition-colors"
                 aria-label="Close image view"
             >
                 <CloseIcon />
@@ -75,8 +74,8 @@ export const ImageModal: React.FC<ImageModalProps> = ({ shot, onClose }) => {
                 className="w-full h-auto object-contain rounded-lg"
             />
         </div>
-        <footer className="p-4 border-t border-gray-700 flex-shrink-0 bg-gray-900/50">
-            <p className="text-sm text-gray-400">{shot.description}</p>
+        <footer className="p-4 border-t border-slate-700 flex-shrink-0 bg-slate-900/50">
+            <p className="text-sm text-slate-400">{shot.description}</p>
         </footer>
       </div>
     </div>

@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import { Header } from './components/Header';
 import { ImageUploader } from './components/ImageUploader';
@@ -107,24 +106,24 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-200 font-sans">
+    <div className="min-h-screen bg-slate-900 text-slate-200 font-sans">
       <Header />
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-5xl mx-auto flex flex-col items-center gap-12">
           <div className="w-full flex flex-col lg:flex-row gap-8 items-start">
             <div className="w-full lg:w-1/3 flex-shrink-0">
-              <h2 className="text-xl font-semibold text-cyan-400 mb-4">1. Upload Source Image</h2>
+              <h2 className="text-xl font-semibold text-indigo-400 mb-4">1. Upload Source Image</h2>
               <ImageUploader onImageUpload={handleImageUpload} sourceImage={sourceImage} />
             </div>
             <div className="w-full lg:w-2/3 mt-4 lg:mt-0">
-               <h2 className="text-xl font-semibold text-cyan-400 mb-4">2. Generate Master Plates</h2>
-               <p className="text-gray-400 mb-6">
+               <h2 className="text-xl font-semibold text-indigo-400 mb-4">2. Generate Perspectives</h2>
+               <p className="text-slate-400 mb-6">
                  Click the button to analyze the spatial composition and generate 5 consistent master plates with different camera perspectives. You can refine each shot individually after generation.
                </p>
               <button
                 onClick={handleGenerate}
                 disabled={!sourceImage || isLoading}
-                className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-cyan-600 text-white font-bold rounded-lg hover:bg-cyan-500 disabled:bg-gray-700 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg shadow-cyan-900/50"
+                className="w-full flex items-center justify-center gap-3 px-6 py-4 bg-indigo-600 text-white font-bold rounded-lg hover:bg-indigo-500 disabled:bg-slate-700 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 disabled:scale-100 shadow-lg shadow-indigo-900/50"
               >
                 {isLoading ? (
                   <>
@@ -153,7 +152,7 @@ const App: React.FC = () => {
 
           {(generatedImages.length > 0) && (
             <div className="w-full mt-8">
-              <h2 className="text-2xl font-bold text-center text-cyan-400 mb-8">Generated Master Plates</h2>
+              <h2 className="text-2xl font-bold text-center text-indigo-400 mb-8">Generated Master Plates</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {generatedImages.map((img, index) => (
                   <GeneratedImageView 

@@ -1,4 +1,3 @@
-
 import React, { useCallback, useState } from 'react';
 import { UploadIcon } from './IconComponents';
 
@@ -50,12 +49,12 @@ export const ImageUploader: React.FC<ImageUploaderProps> = ({ onImageUpload, sou
         onDragOver={handleDragOver}
         onDragEnter={handleDragEnter}
         onDragLeave={handleDragLeave}
-        className={`relative aspect-video w-full border-2 border-dashed rounded-lg flex flex-col justify-center items-center text-center p-4 cursor-pointer transition-colors duration-300 ${isDragging ? 'border-cyan-400 bg-cyan-900/30' : 'border-gray-600 hover:border-cyan-500 hover:bg-gray-800/50'}`}
+        className={`relative aspect-video w-full border-2 border-dashed rounded-lg flex flex-col justify-center items-center text-center p-4 cursor-pointer transition-colors duration-300 ${isDragging ? 'border-indigo-400 bg-indigo-900/30' : 'border-slate-600 hover:border-indigo-500 hover:bg-slate-800/50'}`}
       >
         {sourceImage ? (
           <img src={sourceImage} alt="Source Preview" className="absolute inset-0 w-full h-full object-cover rounded-lg" />
         ) : (
-          <div className="flex flex-col items-center gap-2 text-gray-400">
+          <div className="flex flex-col items-center gap-2 text-slate-400">
             <UploadIcon />
             <span className="font-semibold">Click to upload or drag & drop</span>
             <span className="text-xs">PNG, JPG, WEBP</span>
